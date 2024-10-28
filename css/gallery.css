@@ -1,3 +1,7 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -101,4 +105,15 @@ li:hover {
     .image-cards {
         padding: 30px 0;
     }
+}
+
+.sticky-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
 }
