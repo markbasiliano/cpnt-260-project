@@ -15,6 +15,7 @@ ul {
     margin: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 a {
@@ -24,6 +25,8 @@ a {
 li {
     color: white;
     cursor: pointer;
+    flex: 1; /* Each item takes equal space */
+    text-align: center; /* Center text */
 }
 
 li:hover {
@@ -84,4 +87,34 @@ button {
 button:hover {
     background-color: darkgray;
     color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .container {
+        padding: 15px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Smaller heading */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    button {
+        padding: 12px; /* Adjust button padding */
+    }
 }

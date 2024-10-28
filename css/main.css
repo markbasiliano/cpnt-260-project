@@ -15,6 +15,7 @@ ul {
     margin: 0;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 a {
@@ -24,6 +25,8 @@ a {
 li {
     color: white;
     cursor: pointer;
+    flex: 1; /* Ensures each item takes equal space */
+    text-align: center; /* Center the text */
 }
 
 li:hover {
@@ -55,19 +58,53 @@ p {
 }
 
 .button {
-    display: flex; /* Allows padding and margins */
-    padding: 10px 20px; /* Padding for the button */
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline from links */
-    border-radius: 25px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    display: flex; 
+    padding: 10px 20px; 
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    transition: background-color 0.3s, color 0.3s; 
     justify-content: center;
 }
 
 .button:hover {
-    background-color: darkgray; /* White background on hover */
-    color: black; /* Black text on hover */
-    cursor: pointer; /* Change cursor to pointer */
+    background-color: darkgray; 
+    color: black; 
+    cursor: pointer; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading */
+    }
+
+    p {
+        font-size: 1em; /* Smaller paragraph text */
+    }
+
+    .button {
+        padding: 10px; /* Adjust button padding */
+        font-size: 1em; /* Larger font size for better touch targets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Even smaller heading for mobile */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller paragraph text */
+    }
+
+    .button {
+        width: 100%; /* Full-width buttons on mobile */
+    }
 }
